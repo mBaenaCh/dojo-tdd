@@ -1,15 +1,15 @@
 var secret = '4139';
 
 function solveCode(a){
-    var result='';
-    var aux = '';
+    let result='';
+    let aux = '';
 
-    for (let i = 0; secret.length ; i++){
+    for (let i = 0; i < secret.length ; i++){
 
         if (a[i] === secret[i]){
-            result += 'X';
+            result+='X';
         } else if(secret.includes(a[i])){
-            aux += '_';
+            aux+='_';
         }
     }
 
