@@ -1,4 +1,4 @@
-const codeBreaker = require('./codeBreaker');
+const codeBreaker = require('../codeBreaker');
 
 describe('The digits are correct and, also, in the right position', () => {
     test('The codebreaker result is correct in 1 position', () =>{

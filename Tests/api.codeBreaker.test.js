@@ -1,7 +1,7 @@
 const { TestScheduler } = require('jest');
 const request = require('supertest');
-const { response } = require('./app');
-const app = require('./app');
+const { response } = require('../API/app');
+const app = require('../API/app');
 
 describe("testing /solver path", () => {
     test("it should return status code 200", done => {
