@@ -7,7 +7,6 @@ var app = express();
 app.get('/solver/:numero', function (req, res) {
     var numero = req.params.numero;
     let result = codeBreaker.solveCode(numero);
-    //console.log(result);
     res.send(result);
 });
 
@@ -15,7 +14,6 @@ app.get('/solver/:numero', function (req, res) {
 app.get('/setSecret/:secret', function(req,res){
     let numero = req.params.secret;
     codeBreaker.setSecret(numero)
-    //console.log('Secret actualizado:',codeBreaker.getSecret());
     return res.json ({
         secret: numero
     });
