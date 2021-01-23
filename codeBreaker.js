@@ -1,4 +1,4 @@
-let secret = '';
+let secret = '4139';
 
 function solveCode(a){
     let result='';
