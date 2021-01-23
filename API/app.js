@@ -1,4 +1,4 @@
-const codeBreaker = require('./codeBreaker');
+const codeBreaker = require('../codeBreaker');
 
 var express = require("express");
 var app = express();
