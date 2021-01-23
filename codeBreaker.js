@@ -1,7 +1,6 @@
 var secret = '';
 
 function solveCode(a){
-    //console.log('Secret en el metodo solveCode', secret);
     let result='';
     let aux = '';
     
