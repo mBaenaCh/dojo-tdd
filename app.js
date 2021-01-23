@@ -7,15 +7,16 @@ app.listen( process.env.PORT || 3001, () => {
 });
 
 //1st endpoint
-app.get('/solver', function (req, res) {
-    res.send(codeBreaker.solveCode('4139', '4139'));
+app.get('/solver/:numero', function (req, res) {
+    var numero = req.params.numero;
+    let result = codeBreaker.solveCode(numero);
+    console.log(result);
+    res.send(result);
 });
 
 //2nd endpoint
-app.post('/setSecret', function(req,res){
-    var secret = req.body;
-
-    codeBreaker.setSecret(secret);
-    res.send(req.body);
-    console.log('the secret is:',codeBreaker.getSecret());
+app.get('/setSecret/:secret', function(req,res){
+    var numero = req.params.secret;
+    codeBreaker.setSecret(numero)
+    res.send("El secret se ha modificado!");
 });
