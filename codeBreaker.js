@@ -1,9 +1,9 @@
-let secret = '4139';
+var secret = '';
 
 function solveCode(a){
+    //console.log('Secret en el metodo solveCode', secret);
     let result='';
     let aux = '';
-    //setSecret(s);
     
     for (let i = 0; i < this.secret.length ; i++){
 
@@ -18,13 +18,14 @@ function solveCode(a){
     return result;
 }
 
-function setSecret (s){
+function setSecret(s){
     this.secret = s;
 }
 
-function getSecret (){
+function getSecret(){
     return this.secret;
 }
 
 module.exports.solveCode = solveCode;
 module.exports.setSecret = setSecret;
+module.exports.getSecret = getSecret;
