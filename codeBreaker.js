@@ -1,15 +1,15 @@
-var secret = '4139';
+var secret = '';
 
 function solveCode(a, s){
     let result='';
     let aux = '';
-    setSecret(s);
+    secret = s;
     
-    for (let i = 0; i < getSecret().length ; i++){
+    for (let i = 0; i < secret.length ; i++){
 
-        if (a[i] === getSecret()[i]){
+        if (a[i] === secret[i]){
             result+='X';
-        } else if(getSecret().includes(a[i])){
+        } else if(secret.includes(a[i])){
             aux+='_';
         }
     }
@@ -26,4 +26,4 @@ function getSecret (){
     return this.secret;
 }
 
-module.exports.solveCode = {solveCode,setSecret};
+module.exports.solveCode = solveCode,setSecret;
